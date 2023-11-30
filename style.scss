@@ -25,6 +25,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: space-around;
         padding: 15px;
         gap: 24px;
 
@@ -47,6 +50,19 @@ header {
             }
         }
 
+        #mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+
+            span {
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                margin: 6px 0;
+            }
+        }
+
         #language-switch {
             cursor: pointer;
         }
@@ -65,6 +81,10 @@ header {
             cursor: pointer;
             margin-right: 10px;
         }
+
+        @media screen and (max-width: 991px) {
+            top: 70px; // Adjust the position for smaller screens
+        }
     }
 
     @media screen and (max-width: 991px) {
@@ -74,22 +94,30 @@ header {
             text-align: center;
 
             .logo {
-                width: 100%;
+                width: 35vw;
                 max-width: none;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
+            }
+
+            img {
+                max-width: 35vw;
+                min-width: 25vw;
             }
 
             .menu {
-                flex-direction: column;
-
-                li {
-                    margin-bottom: 10px;
-                }
+                display: none; // Hide the regular menu on small screens
             }
-        }
 
-        #language-options {
-            top: 70px; // Ajusta la posición según sea necesario
+            #mobile-menu {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+            }
+
+            #language-options {
+                top: 70px; // Adjust the position for smaller screens
+            }
         }
     }
 }
@@ -133,6 +161,7 @@ header {
 
 /* Sección imágenes */
 .images-section {
+    padding: 2rem 8rem;
 
     h2 {
         margin-bottom: 0.4em;
@@ -179,7 +208,7 @@ header {
                 .img-content h3 {
                     color: $yellow;
                     font-size: 4em;
-                    font-weight: 500 !important;
+                    font-weight: 500;
                     line-height: 1.2em;
                 }
 

@@ -20,6 +20,9 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
   padding: 15px;
   gap: 24px;
 }
@@ -36,6 +39,17 @@ header nav .menu {
 header nav .menu li a {
   color: #fff;
   text-decoration: none;
+}
+header nav #mobile-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+header nav #mobile-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
 }
 header nav #language-switch {
   cursor: pointer;
@@ -54,23 +68,35 @@ header #language-options span {
   margin-right: 10px;
 }
 @media screen and (max-width: 991px) {
+  header #language-options {
+    top: 70px;
+  }
+}
+@media screen and (max-width: 991px) {
   header nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   header nav .logo {
-    width: 100%;
+    width: 35vw;
     max-width: none;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+  header nav img {
+    max-width: 35vw;
+    min-width: 25vw;
   }
   header nav .menu {
-    flex-direction: column;
+    display: none;
   }
-  header nav .menu li {
-    margin-bottom: 10px;
+  header nav #mobile-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
-  header #language-options {
+  header nav #language-options {
     top: 70px;
   }
 }
@@ -109,6 +135,9 @@ header #language-options span {
 }
 
 /* Sección imágenes */
+.images-section {
+  padding: 2rem 8rem;
+}
 .images-section h2 {
   margin-bottom: 0.4em;
   color: #FF7E00;
@@ -151,7 +180,7 @@ header #language-options span {
 .images-section .image-container .image-overlay .img-content .img-content h3 {
   color: #FFC500;
   font-size: 4em;
-  font-weight: 500 !important;
+  font-weight: 500;
   line-height: 1.2em;
 }
 .images-section .image-container .image-overlay .img-content .arrow {
