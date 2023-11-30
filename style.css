@@ -11,6 +11,10 @@ header {
   width: 100%;
   top: 0px;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 header nav {
   max-width: 1440px;
@@ -129,4 +133,16 @@ header #language-options span {
 }
 .images-section .image-container:hover .image-overlay {
   transform: translateY(-50%);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

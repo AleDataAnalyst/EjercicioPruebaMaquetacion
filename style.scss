@@ -17,6 +17,10 @@ header {
     width: 100%;
     top: 0px;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 
     nav {
         max-width: 1440px;
@@ -158,4 +162,16 @@ header {
             transform: translateY(-50%);
         }
     }
+}
+
+footer {
+    background-color: $dark;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
