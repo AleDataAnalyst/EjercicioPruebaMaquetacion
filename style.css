@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@100;200;300;400;500;600;800;900&display=swap");
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+}
+header nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+header nav .logo {
+  max-width: 30vw;
+  min-width: 30vw;
+  width: 30%;
+}
+header nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+header nav #language-switch {
+  cursor: pointer;
+}
+header #language-options {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #333;
+  padding: 10px;
+}
+header #language-options span {
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.hero-section {
+  margin-top: 80px;
+}
+.hero-section img {
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  display: block;
+  margin: 0 auto;
+}
+.hero-section .hero-image-overlay {
+  background-color: rgba(255, 126, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+.hero-section .hero-image-overlay h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 900 !important;
+}
+.hero-section .hero-image-overlay:hover .hero-image-overlay {
+  transform: translateY(-50%);
+}
+
+.images-section .images-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  align-content: space-around;
+  justify-content: center;
+  align-items: stretch;
+}
+.images-section .image-container {
+  position: relative;
+}
+.images-section .image-container img {
+  width: 70%;
+  height: auto;
+  display: block;
+}
+.images-section .image-container .image-overlay {
+  position: absolute;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.images-section .image-container .image-overlay .img-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.images-section .image-container .image-overlay .img-content h2 {
+  margin: 0;
+  color: #FF7E00;
+  font-size: 3em;
+  font-weight: 500 !important;
+}
+.images-section .image-container .image-overlay .img-content .arrow {
+  font-size: 1.5em;
+  color: #FF7E00;
+  margin-left: 10px;
+}
+.images-section .image-container:hover .image-overlay {
+  transform: translateY(-50%);
+}/*# sourceMappingURL=style.css.map */
